@@ -8,16 +8,26 @@ import messageRoute from "./routes/message.route.js";
 
 dotenv.config();
 
-connectDb();
+async function startServer() {
+  try {
+    await connectDb();
+    console.log("MongoDB connected successfully");
 
-const app = express();
-app.use(cors());
-app.use(express.json());
+    const app = express();
+    app.use(cors());
+    app.use(express.json());
 
-app.use("/conversation", conversationRoutes);
-app.use("/message", messageRoute);
+    app.use("/conversation", conversationRoutes);
+    app.use("/message", messageRoute);
 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, "0.0.0.0", () => {
-  console.log(`Server running on port ${PORT}`);
-});
+    const PORT = process.env.PORT || 4000;
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`Server running on port ${PORT}`);
+    });
+  } catch (error) {
+    console.error("Failed to start server:", error);
+    process.exit(1);
+  }
+}
+
+startServer();
