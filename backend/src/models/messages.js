@@ -30,6 +30,9 @@ const MessageSchema = mongoose.Schema({
   meta_msg_id: {
     type: String,
   },
+  from: {
+    type: String,
+  },
 });
 
 const Message = mongoose.model("Message", MessageSchema, "processed_messages");

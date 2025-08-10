@@ -52,6 +52,7 @@ const processFile = async (filePath) => {
               status: "sent",
               message_id: msg.id,
               meta_msg_id: msg.context?.id || "",
+              from: msg.from,
             },
           },
           { upsert: true }
