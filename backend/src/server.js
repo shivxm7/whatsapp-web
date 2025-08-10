@@ -17,7 +17,7 @@ app.use(express.json());
 app.use("/conversation", conversationRoutes);
 app.use("/message", messageRoute);
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on port ${PORT}`);
 });
