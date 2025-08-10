@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = import.meta.env.BACKEND_URL;
+const API_BASE_URL = import.meta.env.BACKEND_URL || "https://whatsapp-web-u852.onrender.com";
 
 // export const api = axios.create({ baseURL: BASE });
 
