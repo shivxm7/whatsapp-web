@@ -91,7 +91,7 @@ export default function ChatWindow({
               >
                 <div>{m.text}</div>
                 <div className="flex justify-end items-center gap-1 text-xs text-gray-500 mt-1">
-                  {dayjs(m.timestamp).format("HH:mm")}
+                  {dayjs(m.timeStamp).format("DD/MM/YYYY HH:mm")}
                   {isOutgoing && getStatusIcon(m.status)}
                 </div>
               </div>

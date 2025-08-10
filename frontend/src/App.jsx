@@ -58,7 +58,6 @@ export default function App() {
         name,
         text,
         from: myNumber,
-        timestamp: new Date(),
         status: "sent",
         message_id: Date.now().toString(), // temporary ID
       };
