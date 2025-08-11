@@ -8,7 +8,6 @@ import {
   setSelectedUser,
   addMessage,
 } from "./store/getMessagesSlice";
-import axios from "axios";
 import { getConversation, getMessages, sendMessage } from "./api";
 
 export default function App() {
