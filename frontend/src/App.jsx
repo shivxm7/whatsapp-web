@@ -75,13 +75,13 @@ export default function App() {
   };
 
   return (
-    <div className="flex h-screen">
+    <div className="flex  h-screen">
       <Sidebar
         users={users}
         selectedUser={selectedUser}
         onSelectUser={handleSelectUser}
       />
-      <div className="flex-1">
+      <div className="flex flex-col flex-1 overflow-y-auto">
         {selectedUser ? (
           <ChatWindow
             wa_id={selectedUser._id}

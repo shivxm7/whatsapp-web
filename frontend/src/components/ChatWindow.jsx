@@ -24,10 +24,10 @@ export default function ChatWindow({
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
   }, [messages]);
 
-  useEffect(() => {
-    console.log("Selected wa_id changed:", wa_id);
-    console.log("Found conversation:", conv);
-  }, [wa_id, conv]);
+  // useEffect(() => {
+  //   console.log("Selected wa_id changed:", wa_id);
+  //   console.log("Found conversation:", conv);
+  // }, [wa_id, conv]);
 
   const detectOutgoing = (m) => String(m.from) === String(myNumber);
 
@@ -65,7 +65,7 @@ export default function ChatWindow({
       </div>
 
       {/* Messages */}
-      <div ref={scrollRef} className="flex-1 overflow-auto p-4">
+      <div ref={scrollRef} className="flex-1 overflow-auto p-4 scrol">
         {messages.map((m, idx) => {
           //   console.log(
           //     "m.from:",
